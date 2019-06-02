@@ -26,6 +26,7 @@ class Application
 
       if @@items.include?(search_term)
         @@cart << search_term
+        resp.write "added #{search_term}"
       else
         resp.write "No such item."
       end
